@@ -15,7 +15,8 @@
                 Console.WriteLine("Choice a number");
                 Console.WriteLine("hint:1.Display My Frd List \n" +
                     "2:Two Number Sum And Differ Square Root \n 3:Display Place Name As Upper Or Lower Case \n " +
-                    "4:Number Print As String \n 5:Print Full Name \n6:Average  \n7:Circle Area and perimeter \n 8:Next Day Calender\n 9:Exit");
+                    "4:Number Print As String \n 5:Print Full Name \n6:Average  \n7:Circle Area and perimeter \n 8:Next Day Calender \n 9:ExecutionTime " +
+                    "\n 10:Number Print \n11:Factorial \n 12:Print Number Without Using Loop\n 13:Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -50,6 +51,18 @@
                         basicCode.DayCalender();
                         break;
                     case 9:
+                        basicCode.ExecutionTimeCalculate();
+                        break;
+                    case 10:
+                        basicCode.NumberCalculation();
+                        break;
+                    case 11:
+                        basicCode.Factorial();
+                        break;
+                    case 12:
+                        basicCode.PrintNumberRang();
+                        break;
+                    case 13:
                         Console.WriteLine("Exit");
                         flag = false;
                         break;
@@ -58,6 +71,7 @@
                         break;
 
                 }
+                Console.ReadLine();
             }
         }
         //Display Frd Name 

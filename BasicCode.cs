@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -67,18 +68,19 @@ namespace BasicProgramCode
 
             //Console.Write("Input a day [1-31]: ");
             int day = 23;
-           
+
 
             int nextYear = year;
             int nextMonth = month;
             int nextDay = day + 1;
             if (year % 4 == 0)
             {
-               // Console.WriteLine("leap year");
-                if(month == 02)
+                // Console.WriteLine("leap year");
+                if (month == 02)
                 {
-                     totalday = 29;
-                } else if (month == 01 ||month == 03|| month == 05 || month == 07||month == 08||month==10||month==12)
+                    totalday = 29;
+                }
+                else if (month == 01 ||month == 03|| month == 05 || month == 07||month == 08||month==10||month==12)
                 {
                     totalday = 31;
                 }
@@ -107,7 +109,7 @@ namespace BasicProgramCode
             {
                 nextMonth++;
                 nextDay = 1;
-            } 
+            }
             if (totalmonth < nextMonth)
             {
                 nextYear++;
@@ -122,6 +124,88 @@ namespace BasicProgramCode
 
             //Console.WriteLine("Net day is :"+nextDay);
 
+        }
+        //Write a program which will find the execution time if the program.
+        public void ExecutionTimeCalculate()
+        {
+            DateTime dateTime = DateTime.Now;
+            //Variable for Start
+            int starthour = dateTime.Hour;
+            int startMin = dateTime.Minute;
+            int startSec = dateTime.Second;
+            int startMilliSec = dateTime.Millisecond;
+            // Start the program
+            Console.WriteLine("Start the Program Yes or no");
+            string startInput = Console.ReadLine().ToLower();
+            if (startInput.Equals("yes"))
+            {
+                Console.WriteLine("Program Starting ..........");
+                Console.WriteLine("End the program yes or no");
+                //End the Program
+                string endInput = Console.ReadLine().ToLower();
+                if (endInput.Equals("yes"))
+                {
+                    DateTime dateTime1 = DateTime.Now;
+                    int endhour = dateTime1.Hour;
+                    int endMin = dateTime1.Minute;
+                    int endSec = dateTime1.Second;
+                    int endMilliSec = dateTime1.Millisecond;
+                    //Calculate the elapsed time between start and end 
+                    Console.WriteLine("Total Time is Requried the Run Program " +"\n hour :"+(endhour-starthour)+"\nMin :"
+                       +(endMin-startMin)+"\n Second : "+(endSec-startSec)+"\n MilliSecond :"+(endMilliSec-startMilliSec));
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+            }
+        }
+        //"Write a program which will find all such numbers which are divisible by 7
+        //but are not a multiple of 5, between 2000 and 3200 (both included).
+        //The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+        public void NumberCalculation()
+        {
+          
+            for (int i = 2000; i <= 3200; i++)
+            {
+                if (i % 7 == 0 && i % 5 != 0)
+                {
+                    Console.Write(i+","); //single line.
+                }
+            }
+        }
+        //"Write a program which can compute the factorial of a given numbers.
+        //Develop this as function and call from main. function should return factorial. 
+        //Suppose the following input is supplied to the program: 8 Then, the output should be: 40320"
+        public void Factorial()
+        {
+            Console.WriteLine("Enter the number for Fact");
+            int num = 8;
+            int fact = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                fact = fact * i; 
+            }
+            Console.WriteLine(fact); 
+        }
+        //Write a Program to Print 1 to 100 without using loop.
+        public void PrintNumberRang()
+        {
+            //by using jump statement goto
+            int num = 0;
+             start:
+             num++;
+            if (num<=100)
+            {
+                Console.Write(num+" ");
+                goto start;
+            }
         }
     }
 }
