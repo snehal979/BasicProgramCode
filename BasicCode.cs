@@ -171,7 +171,7 @@ namespace BasicProgramCode
 
         public void NumberCalculation()
         {
-          
+
             for (int i = 2000; i <= 3200; i++)
             {
                 if (i % 7 == 0 && i % 5 != 0)
@@ -190,22 +190,55 @@ namespace BasicProgramCode
             int fact = 1;
             for (int i = 1; i <= num; i++)
             {
-                fact = fact * i; 
+                fact = fact * i;
             }
-            Console.WriteLine(fact); 
+            Console.WriteLine(fact);
         }
         //Write a Program to Print 1 to 100 without using loop.
         public void PrintNumberRang()
         {
             //by using jump statement goto
             int num = 0;
-             start:
-             num++;
+start:
+            num++;
             if (num<=100)
             {
                 Console.Write(num+" ");
                 goto start;
             }
+        }
+        //        "Convert a number to a string, the contents of which depend on the number's factors.
+
+        //If the number has 3 as a factor, output 'Pling'.
+        //If the number has 5 as a factor, output 'Plang'.
+        //If the number has 7 as a factor, output 'Plong'.
+        //If the number does not have 3, 5, or 7 as a factor, just pass the number's digits straight through. 
+        //(Example :28 has 7 as a factor, but not 3 or 5, so the result would be “Plong”.
+        //30 has both 3 and 5 as factors, but not 7, so the result would be “PlingPlang”.
+        //34 is not factored by 3, 5, or 7, so the result would be “34”.)"
+
+        public void NumberToString()
+        {
+            string value = "";
+            Console.WriteLine("Enter the number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number%3==0)
+            {
+                value = value + "Pling";
+            }
+            if (number%5==0)
+            {
+                value = value + "Plang";
+            }
+            if (number%7==0)
+            {
+                value = value+ "Plong";
+            }
+            if (number%3!=0&&number%5!=0&&number%7!=0)
+            {
+                value=value+number.ToString();
+            }
+            Console.WriteLine(value);
         }
     }
 }

@@ -16,7 +16,7 @@
                 Console.WriteLine("hint:1.Display My Frd List \n" +
                     "2:Two Number Sum And Differ Square Root \n 3:Display Place Name As Upper Or Lower Case \n " +
                     "4:Number Print As String \n 5:Print Full Name \n6:Average  \n7:Circle Area and perimeter \n 8:Next Day Calender \n 9:ExecutionTime " +
-                    "\n 10:Number Print \n11:Factorial \n 12:Print Number Without Using Loop\n 13:Exit");
+                    "\n 10:Number Print \n11:Factorial \n 12:Print Number Without Using Loop\n13:Number To String \n 14:Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -63,6 +63,9 @@
                         basicCode.PrintNumberRang();
                         break;
                     case 13:
+                        basicCode.NumberToString();
+                        break;
+                    case 14:
                         Console.WriteLine("Exit");
                         flag = false;
                         break;
