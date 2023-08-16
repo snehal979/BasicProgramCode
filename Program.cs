@@ -7,7 +7,9 @@
             Console.WriteLine("Welcome To Basic Program Code");
             Program program = new Program();
             //program.DisplayFriendName();
-            program.TwoNumberCalculation();
+            //program.TwoNumberCalculation();
+            // program.DisplayPlaceNameStyle();
+            program.NumberAsString();
         }
         //Display Frd Name 
         public void DisplayFriendName()
@@ -44,6 +46,17 @@
             string placeName = Console.ReadLine();
             Console.WriteLine("Place Name in Upper Case : "+placeName.ToUpper());
             Console.WriteLine("Place Name in Lower Case : "+placeName.ToLower());
+        }
+        // Read a number from user as string and print 10 times of that number as string only
+        public void NumberAsString()
+        {
+            Console.WriteLine("Enter the Number");
+            string number = Console.ReadLine();
+            Console.WriteLine("Print number");
+            for (int i = 0; i<10; i++)
+            {
+                Console.WriteLine(number);
+            }
         }
 
     }
