@@ -58,6 +58,22 @@
                 Console.WriteLine(number);
             }
         }
+        // Write a program which takes a command line arguments of a person's full
+        // name (First Name, Last Name, Middle name(s) if any) and prints how many parts
+        // are there in the name. Also puts different parts of arguments in one variable and prints the same
+        public void ArgumentVariable(string fullName)
+        {
+            string[] array = fullName.Split(" ");
+            Console.WriteLine("parts of Full Name "+array.Length);
 
+            string result = "";
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                result = result + array[i]+" ";
+            }
+
+            Console.WriteLine("Simple name :"+result);
+        }
     }
 }
