@@ -5,11 +5,50 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Basic Program Code");
+
+            Console.WriteLine("Basic Program");
             Program program = new Program();
-            //program.DisplayFriendName();
-            //program.TwoNumberCalculation();
-            // program.DisplayPlaceNameStyle();
-            program.NumberAsString();
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine("Choice a number");
+                Console.WriteLine("hint:1.Display My Frd List \n" +
+                    "2:Two Number Sum And Differ Square Root \n 3:Display Place Name As Upper Or Lower Case \n " +
+                    "4:Number Print As String \n 5:Print Full Name \n7:Average \n 8:Exit");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        program.DisplayFriendName();
+                        break;
+                    case 2:
+                        program.TwoNumberCalculation();
+                        break;
+                    case 3:
+                        program.DisplayPlaceNameStyle();
+                        break;
+                    case 4:
+                        program.NumberAsString();
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter FirstName");
+                        string firstName = Console.ReadLine();
+                        Console.WriteLine("Enter LastName");
+                        string lastName = Console.ReadLine();
+                        string fullName = firstName+" "+lastName;
+                        program.ArgumentVariable(fullName);
+                        break;
+                    
+                    case 7:
+                        Console.WriteLine("Exit");
+                        flag = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Choice");
+                        break;
+
+                }
+            }
         }
         //Display Frd Name 
         public void DisplayFriendName()
@@ -58,6 +97,22 @@
                 Console.WriteLine(number);
             }
         }
+        // Write a program which takes a command line arguments of a person's full
+        // name (First Name, Last Name, Middle name(s) if any) and prints how many parts
+        // are there in the name. Also puts different parts of arguments in one variable and prints the same
+        public void ArgumentVariable(string fullName)
+        {
+            string[] array = fullName.Split(" ");
+            Console.WriteLine("parts of Full Name "+array.Length);
 
+            string result = "";
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                result = result + array[i]+" ";
+            }
+
+            Console.WriteLine("Simple name :"+result);
+        }
     }
 }
