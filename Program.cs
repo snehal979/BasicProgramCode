@@ -35,6 +35,16 @@
             Console.WriteLine("Square of sum of Two Number: "+Math.Pow(sumOfNum, 2));
             Console.WriteLine("Square of difference of Two Number: "+Math.Pow(subOfNum, 2));
         }
+        //Write a program which takes input of a place name  where you would like
+        //to visit most and displays that with place with  uppercase once and then
+        //all lower case once
+        public void DisplayPlaceNameStyle()
+        {
+            Console.WriteLine("Enter the Place Name");
+            string placeName = Console.ReadLine();
+            Console.WriteLine("Place Name in Upper Case : "+placeName.ToUpper());
+            Console.WriteLine("Place Name in Lower Case : "+placeName.ToLower());
+        }
 
     }
 }
