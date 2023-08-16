@@ -123,5 +123,47 @@ namespace BasicProgramCode
             //Console.WriteLine("Net day is :"+nextDay);
 
         }
+        //Write a program which will find the execution time if the program.
+        public void ExecutionTimeCalculate()
+        {
+            DateTime dateTime = DateTime.Now;
+            //Variable for Start
+            int starthour = dateTime.Hour;
+            int startMin = dateTime.Minute;
+            int startSec = dateTime.Second;
+            int startMilliSec = dateTime.Millisecond;
+            // Start the program
+            Console.WriteLine("Start the Program Yes or no");
+            string startInput = Console.ReadLine().ToLower();
+            if (startInput.Equals("yes"))
+            {
+                Console.WriteLine("Program Starting ..........");
+                Console.WriteLine("End the program yes or no");
+                //End the Program
+                string endInput = Console.ReadLine().ToLower();
+                if (endInput.Equals("yes"))
+                {
+                    DateTime dateTime1 = DateTime.Now;
+                    int endhour = dateTime1.Hour;
+                    int endMin = dateTime1.Minute;
+                    int endSec = dateTime1.Second;
+                    int endMilliSec = dateTime1.Millisecond;
+                    //Calculate the elapsed time between start and end 
+                    Console.WriteLine("Total Time is Requried the Run Program " +"\n hour :"+(endhour-starthour)+"\nMin :"
+                       +(endMin-startMin)+"\n Second : "+(endSec-startSec)+"\n MilliSecond :"+(endMilliSec-startMilliSec));
+                    //Console.WriteLine("{0:HH:ss:ff}", dateTime1);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+            }
+        }
+
     }
+    
 }
