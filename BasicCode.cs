@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -192,6 +193,19 @@ namespace BasicProgramCode
                 fact = fact * i; 
             }
             Console.WriteLine(fact); 
+        }
+        //Write a Program to Print 1 to 100 without using loop.
+        public void PrintNumberRang()
+        {
+            //by using jump statement goto
+            int num = 0;
+             start:
+             num++;
+            if (num<=100)
+            {
+                Console.Write(num+" ");
+                goto start;
+            }
         }
     }
 }
