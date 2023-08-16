@@ -179,5 +179,19 @@ namespace BasicProgramCode
                 }
             }
         }
+        //"Write a program which can compute the factorial of a given numbers.
+        //Develop this as function and call from main. function should return factorial. 
+        //Suppose the following input is supplied to the program: 8 Then, the output should be: 40320"
+        public void Factorial()
+        {
+            Console.WriteLine("Enter the number for Fact");
+            int num = 8;
+            int fact = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                fact = fact * i; 
+            }
+            Console.WriteLine(fact); 
+        }
     }
 }
