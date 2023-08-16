@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BasicProgramCode
@@ -240,5 +241,37 @@ start:
             }
             Console.WriteLine(value);
         }
+        //Write a Program to  Find Roots of a Quadratic Equation.
+        //(using If Else statement or switch The roots of a Quadratic Equation (ax2+bx+c)
+        //depends upon the discriminant value.)
+        public void QuadraticEquation()
+        {
+            //discriminantValue = b2; -4ac
+            int a =2, b=16, c=4;
+            double x1, x2;
+            double discriminantValue = b*b-(4*a*c);
+
+            if (discriminantValue > 0) // condition for real and different roots
+            {
+                x1 = (-b + Math.Sqrt(discriminantValue)) / (2 * a);
+                x2 = (-b - Math.Sqrt(discriminantValue)) / (2 * a);
+                Console.WriteLine("the value of x = {0} and x = {1} ",x1,x2);
+            }
+            else if (discriminantValue == 0) // condition for real and equal roots
+            {
+                x1 = x2 = -b / (2 * a);
+                Console.WriteLine("the value of x = {0} and x = {1} ", x1, x2);
+            }
+            else // // if roots are not real
+            {
+                double part1 = -b / (2 * a);
+                 double part2 = Math.Sqrt(-discriminantValue) / (2 * a); //i part i= sqrt(-1)
+                x1 = part1+ part2;
+                x2 = part1-part2;
+                Console.WriteLine("the value of x = {0} and x = {1} ", x1, x2);
+
+            }
+        }
     }
+
 }
