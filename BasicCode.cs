@@ -67,18 +67,19 @@ namespace BasicProgramCode
 
             //Console.Write("Input a day [1-31]: ");
             int day = 23;
-           
+
 
             int nextYear = year;
             int nextMonth = month;
             int nextDay = day + 1;
             if (year % 4 == 0)
             {
-               // Console.WriteLine("leap year");
-                if(month == 02)
+                // Console.WriteLine("leap year");
+                if (month == 02)
                 {
-                     totalday = 29;
-                } else if (month == 01 ||month == 03|| month == 05 || month == 07||month == 08||month==10||month==12)
+                    totalday = 29;
+                }
+                else if (month == 01 ||month == 03|| month == 05 || month == 07||month == 08||month==10||month==12)
                 {
                     totalday = 31;
                 }
@@ -107,7 +108,7 @@ namespace BasicProgramCode
             {
                 nextMonth++;
                 nextDay = 1;
-            } 
+            }
             if (totalmonth < nextMonth)
             {
                 nextYear++;
@@ -151,7 +152,7 @@ namespace BasicProgramCode
                     //Calculate the elapsed time between start and end 
                     Console.WriteLine("Total Time is Requried the Run Program " +"\n hour :"+(endhour-starthour)+"\nMin :"
                        +(endMin-startMin)+"\n Second : "+(endSec-startSec)+"\n MilliSecond :"+(endMilliSec-startMilliSec));
-                    //Console.WriteLine("{0:HH:ss:ff}", dateTime1);
+
                 }
                 else
                 {
@@ -163,7 +164,20 @@ namespace BasicProgramCode
                 Console.WriteLine("Invalid Input");
             }
         }
+        //"Write a program which will find all such numbers which are divisible by 7
+        //but are not a multiple of 5, between 2000 and 3200 (both included).
+        //The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+        public void NumberCalculation()
+        {
+          
+            for (int i = 2000; i <= 3200; i++)
+            {
+                if (i % 7 == 0 && i % 5 != 0)
+                {
+                    Console.Write(i+","); //single line.
+                }
+            }
+        }
     }
-    
 }
