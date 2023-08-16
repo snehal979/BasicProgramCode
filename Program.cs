@@ -14,7 +14,7 @@
                 Console.WriteLine("Choice a number");
                 Console.WriteLine("hint:1.Display My Frd List \n" +
                     "2:Two Number Sum And Differ Square Root \n 3:Display Place Name As Upper Or Lower Case \n " +
-                    "4:Number Print As String \n 5:Print Full Name \n7:Average \n 8:Exit");
+                    "4:Number Print As String \n 5:Print Full Name \n6:Average \n 7:Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -38,7 +38,10 @@
                         string fullName = firstName+" "+lastName;
                         program.ArgumentVariable(fullName);
                         break;
-                    
+                    case 6:
+                        BasicCode basicCode = new BasicCode();
+                        basicCode.AverageOfNumber();
+                        break;
                     case 7:
                         Console.WriteLine("Exit");
                         flag = false;
